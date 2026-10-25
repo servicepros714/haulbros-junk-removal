@@ -1,0 +1,60 @@
+.section {
+  padding: 100px 0;
+  background:
+    repeating-linear-gradient(135deg, rgba(244, 234, 208, 0.025) 0 2px, transparent 2px 14px),
+    var(--navy-deep);
+  color: var(--cream);
+}
+.eyebrow { color: var(--amber); }
+.title { color: var(--cream); }
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  position: relative;
+}
+/* dashed haul route connecting the steps */
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 44px;
+  left: 16%;
+  right: 16%;
+  border-top: 3px dashed rgba(235, 164, 58, 0.55);
+}
+
+.step { position: relative; text-align: center; padding: 0 12px; }
+.badge {
+  position: relative;
+  z-index: 1;
+  width: 88px; height: 88px;
+  margin: 0 auto 24px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 40px;
+  box-shadow: 0 0 0 6px var(--navy-deep), 0 0 0 9px var(--amber);
+}
+.stepTitle {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+.stepText { margin: 10px auto 0; max-width: 320px; color: rgba(244, 234, 208, 0.78); font-size: 16.5px; }
+
+@media (max-width: 860px) {
+  .section { padding: 76px 0; }
+  .steps { grid-template-columns: 1fr; gap: 40px; }
+  .steps::before { top: 44px; bottom: 60px; left: 50%; right: auto; border-top: 0; border-left: 3px dashed rgba(235, 164, 58, 0.4); }
+  .stepText { background: var(--navy-deep); }
+  .stepTitle { background: var(--navy-deep); display: inline-block; padding: 0 8px; }
+}

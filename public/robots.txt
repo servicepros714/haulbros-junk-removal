@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haulbrosjunkremoval.com/sitemap.xml

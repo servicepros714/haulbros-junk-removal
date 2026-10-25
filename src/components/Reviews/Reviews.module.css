@@ -1,0 +1,32 @@
+.section { padding: 100px 0; background: var(--cream); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.card {
+  margin: 0;
+  background: #fff;
+  border: 2px dashed var(--navy);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.stars { display: flex; gap: 3px; color: var(--amber); }
+.card p { margin: 0; font-size: 16.5px; flex: 1; }
+.card cite {
+  font-style: normal;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.foot { margin-top: 40px; text-align: center; }
+
+@media (max-width: 960px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .section { padding: 76px 0; } }

@@ -1,0 +1,31 @@
+.bar { display: none; }
+
+@media (max-width: 860px) {
+  .bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: var(--navy-ink);
+    border-top: 2px dashed rgba(244, 234, 208, 0.25);
+  }
+  .call, .quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 50px;
+    border-radius: 999px;
+    font-family: var(--font-label);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .call { background: var(--cream); color: var(--navy-ink); }
+  .quote { background: var(--amber); color: var(--navy-ink); }
+}
